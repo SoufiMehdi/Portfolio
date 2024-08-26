@@ -1,0 +1,22 @@
+# Activer la réécriture d'URL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Rediriger tout le trafic vers le front controller de Symfony (index.php)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [QSA,L]
+
+    # Permettre l'accès direct aux fichiers du dossier build
+    RewriteCond %{REQUEST_URI} ^/build/
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+
+    # Désactiver la réécriture pour les fichiers statiques existants
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+</IfModule>
+
+# Gérer les erreurs pour les fichiers non trouvés
+ErrorDocument 404 /index.php
+
