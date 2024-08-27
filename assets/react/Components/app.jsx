@@ -1,9 +1,10 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 
 const App = () => {
     return (
-      <div className="portfolio-ide">  
-      // mettre la side bare ici
+      <div className="portfolio-side">
+        <Sidebar />
       <div className="main-content">
       //metre en place la contenue
       </div>

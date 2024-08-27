@@ -9,6 +9,7 @@ Encore
     .setPublicPath('/build')
     .addEntry('app', './assets/react/index.js')
     .addEntry('styles', './assets/style/styles.scss')
+    .addEntry('sidebar', './assets/style/Sidebar.scss')
 
     .splitEntryChunks()
     .enableSingleRuntimeChunk()

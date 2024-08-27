@@ -1,0 +1,18 @@
+.sidebar {
+  width: 250px;
+  background-color: #44475a;
+  color: #f8f8f2;
+  padding: 10px;
+  overflow: auto;
+  border-right: 1px solid #6272a4;
+}
+
+.folder {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.folder:hover {
+  color: #bd93f9;
+}
