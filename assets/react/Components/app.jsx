@@ -2,9 +2,14 @@ import React from "react";
 
 const App = () => {
     return (
-      <div>
-          Bonjour Tous le monde !
+      <div className="portfolio-ide">  
+      // mettre la side bare ici
+      <div className="main-content">
+      //metre en place la contenue
       </div>
+      //metre ici le footer
+      </div>
+      
     );
 }
 
