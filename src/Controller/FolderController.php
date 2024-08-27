@@ -13,11 +13,11 @@ class FolderController extends AbstractController
     public function getFolders(): Response
     {
         $folders = [
-          'Formations',
-          'Experiences',
-          'Projets',
-          'Competences',
-          'Hobies',
+          ['name' => 'Formations', 'sous-dossier' => ['Master 2 en ingenierie logiciel', 'Licence Informatique']],
+          ['name' => 'Experiences', 'sous-dossier' => ['Dylog', 'Sonelgaz', 'Numeria', 'Elancia', 'Vilage vacance France']],
+          ['name' => 'Projets'],
+          ['name' => 'Competences'],
+          ['name' => 'Hobies'],
         ];
         return new JsonResponse($folders);
     }

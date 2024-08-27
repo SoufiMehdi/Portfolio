@@ -8,11 +8,31 @@
 }
 
 .folder {
-  margin: 10px 0;
+  margin: 5px 0;
   cursor: pointer;
+}
+
+.folder-name {
+  display: flex;
+  align-items: center;
   transition: color 0.3s;
 }
 
-.folder:hover {
-  color: #bd93f9;
+.folder-name:hover {
+  color: #ff79c6; /* Couleur survolée des dossiers */
+}
+
+.subfolders {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.subfolders p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #f8f8f2;
+}
+
+.subfolders p:hover {
+  color: #8be9fd; /* Couleur survolée des sous-dossiers */
 }

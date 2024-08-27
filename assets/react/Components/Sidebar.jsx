@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import '../../style/Sidebar.scss';
+import Folder from './Folder';
 
 const Sidebar = () => {
     const [folders, setFolders] = useState([]);
@@ -15,9 +16,7 @@ const Sidebar = () => {
     return (
       <div className="sidebar">
           {folders.map((folder, index) => (
-              <div className="folder">
-                  <p key={index}> {folder}</p>
-              </div>
+            <Folder key={index} folder={folder} />
           ))}
       </div>
     );
